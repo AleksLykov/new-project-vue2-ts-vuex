@@ -1,0 +1,539 @@
+/*
+Write your variables here. All available variables can be
+found in element-ui/packages/theme-chalk/src/common/var.scss.
+For example, to overwrite the theme color:
+*/
+@import './uikit';
+$--color-primary: $primary;
+// общие классы
+.label-font {
+  font-size: $p2;
+  font-weight: 700;
+  color: $text-primary;
+}
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+// лоадинг круглый
+.r-loading {
+  box-sizing: border-box;
+  z-index: 500 !important;
+  background-color: rgba(245, 245, 245, 0.7) !important;
+  backdrop-filter: blur(0.1em);
+  svg {
+    height: 60px !important;
+    width: 60px !important;
+    filter: blur(0.3px) !important;
+    circle {
+      stroke: #5e92f3 !important;
+      stroke-width: 4 !important;
+    }
+  }
+  &.w {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(0.15em);
+  }
+}
+// лоадинг без круглого лоадера
+.none-loading {
+  box-sizing: border-box;
+  z-index: 500 !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(0.15em);
+  svg {
+    display: none !important;
+  }
+}
+div.el-loading-mask {
+  z-index: 500;
+}
+// табы
+div.el-tabs__header.is-top {
+  margin: 0 0 10px !important;
+}
+.el-tabs__item {
+  font-weight: 700 !important;
+  line-height: 24px !important;
+  height: 26px !important;
+  color: $secondary-dark !important;
+}
+.el-tabs__nav .el-tabs__item:focus.is-active.is-focus:not(:active) {
+  box-shadow: none;
+}
+.el-tabs__item.is-active {
+  color: $primary !important;
+}
+.el-tabs__nav-wrap::after {
+  display: none;
+}
+.el-tabs__active-bar {
+  height: 3px !important;
+}
+// хлебные крошки
+.el-breadcrumb__inner {
+  font-size: $p2 !important;
+}
+span.el-breadcrumb__separator {
+  font-size: $p1;
+  margin: 0 7px;
+}
+.el-breadcrumb__item {
+  span.el-breadcrumb__inner,
+  span.el-breadcrumb__separator {
+    color: $primary;
+    font-weight: normal;
+    white-space: break-spaces !important;
+  }
+  span.el-breadcrumb__inner {
+    text-decoration: underline;
+  }
+  &:last-child {
+    span.el-breadcrumb__inner,
+    span.el-breadcrumb__inner:hover {
+      color: $text-primary;
+      text-decoration: none;
+    }
+  }
+}
+// инпуты
+.m-input-decorator {
+  &.required {
+    .label.m-label::after {
+      content: '*';
+      color: #{$error};
+    }
+  }
+  .block-input {
+    width: 100%;
+    .el-input__inner {
+      height: var(--input-height) !important;
+    }
+    .block-notify {
+      width: 100%;
+      text-align: left;
+    }
+  }
+  .el-input .el-input__inner {
+    padding-left: 5px !important;
+  }
+}
+.m-input-decorator:not([error]) {
+  .block-notify,
+  .label-margin {
+    display: none;
+  }
+}
+.m-input.pre-half {
+  > div:first-child {
+    width: 15% !important;
+  }
+  > div:last-child {
+    width: 85%;
+  }
+}
+.m-input.pre-4 {
+  > div:first-child {
+    width: 20% !important;
+  }
+  > div:last-child {
+    width: 80%;
+  }
+}
+.m-input.half {
+  > div:first-child {
+    width: 50%;
+  }
+  > div:last-child {
+    width: 50%;
+  }
+}
+.input100 {
+  > div:first-child {
+    width: 0;
+    margin: 0;
+  }
+  > div:last-child {
+    width: 100%;
+  }
+}
+.el-input__inner {
+  font-size: $p1 !important;
+}
+textarea.el-textarea__inner {
+  padding: 0 5px;
+  color: $text-primary;
+  border: 1px solid $text-secondary;
+  font-size: $p1;
+}
+// селекты
+.v-menu__content.root-dropdown {
+  z-index: 1000 !important;
+}
+.m-select,
+.m-multiple-select {
+  .el-input .el-input__inner {
+    padding-right: 30px;
+  }
+  &.pre-half {
+    > div:first-child {
+      width: 15% !important;
+    }
+    > div:last-child {
+      width: 85%;
+    }
+  }
+  &.half {
+    > div:first-child {
+      width: 50% !important;
+    }
+    > div:last-child {
+      width: 50%;
+    }
+  }
+  &.pre-2 {
+    > div:first-child {
+      width: 41% !important;
+    }
+    > div:last-child {
+      width: 60%;
+    }
+  }
+}
+.select100 {
+  > div:first-child {
+    width: 0;
+    margin: 0;
+  }
+  > div:last-child {
+    width: 100%;
+  }
+}
+.el-select-dropdown__item {
+  --base: #{$p1};
+}
+.el-select__tags {
+  flex-wrap: nowrap !important;
+  overflow: hidden;
+  justify-content: flex-start;
+  border-left: 1px solid $divider;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  &:hover {
+    border-left: 1px solid #888c94;
+  }
+}
+.el-date-editor span.el-input__prefix {
+  right: 0 !important;
+  top: 1px;
+}
+.input-date {
+  .el-icon-date::before {
+    content: '\F0679';
+    display: inline-block;
+    font: normal normal normal 24px/1 'Material Design Icons';
+    font-size: 20px;
+    line-height: inherit;
+  }
+}
+.input-datetime {
+  .el-icon-time::before {
+    content: '\F00F0';
+    display: inline-block;
+    font: normal normal normal 24px/1 'Material Design Icons';
+    font-size: 20px;
+    line-height: inherit;
+  }
+}
+.m-multiple-select .el-select__tags .el-tag .el-tag__close.el-icon-close {
+  margin-top: 1px;
+}
+// кнопки
+.m-button.white-icon .m-button--append-icon,
+.lkfilter__details .m-button--append-icon,
+.el-button .m-button--append-icon {
+  margin-right: -5px;
+}
+.m-button.m-button--square .m-button--append-icon {
+  margin-right: 0;
+  padding-top: 0;
+}
+.m-button.white-icon .m-icon,
+.lkfilter__details .m-icon,
+.el-button.white-icon .m-icon {
+  color: $backgroundW !important;
+}
+.el-button--default .m-icon {
+  color: $text-primary !important;
+}
+.filter_three-buttons .m-icon {
+  color: $text-secondary !important;
+  margin-right: 5px;
+}
+.el-button .m-icon {
+  --large: 22px !important;
+}
+.el-button.m-button.edit-button {
+  padding: 0 0 0 10px !important;
+  background-color: #fff !important;
+  border: 0;
+  span {
+    --base: #{$p2};
+    font-weight: normal;
+  }
+  .m-icon {
+    font-weight: 700;
+    --large: 18px !important;
+  }
+  &.red-icon {
+    span {
+      color: $error;
+    }
+    .m-icon {
+      color: $error !important;
+    }
+  }
+  &.blue-icon {
+    span {
+      color: $primary;
+    }
+    .m-icon {
+      color: $primary !important;
+    }
+  }
+  &.green-icon {
+    &:hover {
+      background-color: $success-hover !important;
+    }
+    span {
+      color: $success;
+    }
+    .m-icon {
+      color: $success !important;
+    }
+  }
+}
+.el-button {
+  margin-left: 10px !important;
+  &:first-of-type {
+    margin-left: 0 !important;
+  }
+}
+button.el-button.el-button--base {
+  min-height: 32px;
+  height: 32px;
+  --base: #{$p1};
+}
+.m-icon.m-icon__base {
+  font-size: 20px !important;
+  padding-top: 2px;
+}
+// иконки
+.m-icon.color-primary {
+  color: $primary !important;
+}
+// модальное окно
+.el-dialog__wrapper.no-header {
+  .el-dialog__header {
+    display: none;
+  }
+}
+.el-dialog__wrapper.confirm-modal {
+  .el-dialog {
+    margin-right: 100px;
+    border: 1px solid $warning;
+    background-color: $warning-light;
+  }
+}
+// dropdown
+.el-dropdown-menu.el-popper {
+  border: 0.1em solid $divider;
+  box-shadow: 0 1px 2px rgba(42, 60, 73, 0.5);
+  padding: 0;
+  .el-dropdown-menu__item {
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+    color: $text-primary;
+    font-weight: bold;
+    &:hover,
+    &:focus {
+      color: $text-primary;
+      background-color: $action-hover;
+    }
+  }
+  .popper__arrow {
+    display: none;
+  }
+}
+// чекбоксы
+.el-checkbox__label {
+  letter-spacing: 0 !important;
+  font-weight: 700 !important;
+  --small: #{$p2};
+}
+span.el-checkbox__input.is-disabled.is-checked .el-checkbox__inner::after {
+  border-color: #fff;
+}
+span.el-checkbox__input.is-checked .el-checkbox__inner::after {
+  left: 5px !important;
+}
+// радиобаттоны
+.el-radio__input .el-radio__inner:after {
+  top: 4px !important;
+  left: 4px !important;
+}
+// таблицы и пагинация
+.el-table {
+  width: 100% !important;
+  th.is-leaf {
+    &.is-sortable .cell {
+      margin-bottom: 0;
+    }
+    .cell {
+      margin-bottom: 2px;
+    }
+  }
+}
+.el-table__body {
+  width: 100% !important;
+}
+.el-table__header thead,
+.el-table__body tr {
+  color: $text-primary !important;
+  font-size: $p1;
+}
+.el-pagination input,
+.el-pagination button,
+.el-pagination li:not(.active) {
+  background-color: $backgroundW !important;
+}
+.el-pager {
+  padding: 0 !important;
+}
+div.el-table .cell {
+  word-break: break-word;
+  white-space: break-spaces !important;
+}
+.m-pagination.el-pagination .el-input__inner {
+  height: 32px !important;
+}
+// ТУЛТИПЫ
+.Vue-Toastification__toast {
+  border-radius: 4px;
+  padding: 13px 24px;
+  min-height: 50px;
+  font-family: 'PT Sans', sans-serif;
+}
+.Vue-Toastification__toast-body {
+  font-size: 14px;
+  cursor: default;
+}
+.el-tooltip__popper.m-tooltip__popper {
+  &.is-light {
+    background-color: $secondary;
+    &[x-placement^='top'] .popper__arrow {
+      border-top-color: $secondary;
+      &::after {
+        border-top-color: $secondary;
+      }
+    }
+    &[x-placement^='bottom'] .popper__arrow {
+      border-bottom-color: $secondary;
+      &::after {
+        border-bottom-color: $secondary;
+      }
+    }
+    &[x-placement^='left'] .popper__arrow {
+      border-left-color: $secondary;
+      &::after {
+        border-left-color: $secondary;
+      }
+    }
+    &[x-placement^='right'] .popper__arrow {
+      border-right-color: $secondary;
+      &::after {
+        border-right-color: $secondary;
+      }
+    }
+  }
+}
+// Steps
+div.el-step__head {
+  &.is-success {
+    color: $success;
+    border-color: $success;
+    .el-step__line {
+      background-color: $success;
+    }
+  }
+  &.is-process {
+    color: $primary;
+    border-color: $primary;
+  }
+  &.is-wait {
+    color: $secondary;
+    border-color: $secondary;
+  }
+  .el-step__line {
+    background-color: $secondary;
+  }
+}
+.el-step__main {
+  .el-step__title {
+    &.is-success {
+      color: $success;
+    }
+    &.is-process {
+      color: $primary;
+    }
+    &.is-wait {
+      color: $secondary;
+    }
+  }
+}
+div.el-step__icon {
+  width: 30px;
+  height: 30px;
+}
+div.el-step.is-horizontal .el-step__line {
+  top: 15px;
+}
+div.el-step__title {
+  font-size: $p1;
+}
+.Vue-Toastification__toast--success {
+  background-color: $success;
+}
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+@import '~element-ui/packages/theme-chalk/src/index';
+
+// DATE PICKER
+.el-picker-panel.el-date-picker {
+  .el-date-picker__header {
+    margin: 0px;
+    padding: 8px 12px;
+    background: $primary-color;
+    background: $primary-gradient;
+    direction: rtl;
+    button.el-picker-panel__icon-btn,
+    span.el-date-picker__header-label {
+      color: $backgroundW;
+      font-weight: 700;
+      text-transform: uppercase;
+      &:hover {
+        color: $secondary !important;
+      }
+    }
+  }
+  .popper__arrow::after {
+    border-bottom-color: $primary-color;
+  }
+  .el-picker-panel__content {
+    td.available.current span {
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+    }
+  }
+}

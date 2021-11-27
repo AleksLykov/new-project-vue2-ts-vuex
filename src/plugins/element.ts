@@ -1,0 +1,21 @@
+import Vue from 'vue';
+import Row from 'element-ui/lib/row';
+import Col from 'element-ui/lib/col';
+import Dialog from 'element-ui/lib/dialog';
+import Upload from 'element-ui/lib/upload';
+import Steps from 'element-ui/lib/steps';
+import Step from 'element-ui/lib/step';
+import Tag from 'element-ui/lib/tag';
+import BreadCrumb from 'element-ui/lib/breadcrumb';
+import BreadCrumbItem from 'element-ui/lib/breadcrumb-item';
+import '@styles/element-variables.scss';
+
+Vue.use(Row);
+Vue.use(Col);
+Vue.use(Dialog);
+Vue.use(Upload);
+Vue.use(Steps);
+Vue.use(Step);
+Vue.use(Tag);
+Vue.use(BreadCrumb);
+Vue.use(BreadCrumbItem);
