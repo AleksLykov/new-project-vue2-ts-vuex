@@ -1,0 +1,17 @@
+export const availableFormat = [
+  'doc',
+  'docx',
+  'excel',
+  'csv',
+  'svg',
+  'pptx',
+  'odt',
+  'ods',
+  'odp',
+  'txt',
+  'pdf',
+  'pdf/a',
+  'jpg',
+  'png',
+  'zip',
+];

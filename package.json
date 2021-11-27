@@ -1,0 +1,71 @@
+{
+  "name": "my-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "vue-cli-service serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11",
+    "element-ui": "^2.4.5",
+    "moment": "^2.27.0",
+    "vue-class-component": "^7.2.3",
+    "vue-progressbar": "^0.7.5",
+    "vue-property-decorator": "^9.1.2",
+    "vue-router": "^3.2.0",
+    "vue-sanitize": "^0.2.1",
+    "vue-toastification": "^1.7.8",
+    "vue2-smooth-scroll": "^1.5.0",
+    "vuelidate": "^0.7.6",
+    "vuetify": "^2.6.0",
+    "vuex": "^3.4.0",
+    "vuex-class": "^0.3.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^5.2.4",
+    "@types/sortablejs": "^1.10.7",
+    "@types/vuelidate": "^0.7.15",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-e2e-cypress": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-plugin-unit-mocha": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "@vue/test-utils": "^1.0.3",
+    "moment-locales-webpack-plugin": "^1.2.0",
+    "chai": "^4.1.2",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "sass": "~1.32.12",
+    "sass-loader": "^8.0.2",
+    "typescript": "~4.1.5",
+    "vue-cli-plugin-element": "~1.0.1",
+    "vue-cli-plugin-vuetify": "~2.4.4",
+    "vue-template-compiler": "^2.6.11",
+    "tsconfig-paths-webpack-plugin": "^3.3.0",
+    "vuetify-loader": "^1.7.3"
+  },
+
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
